@@ -1,6 +1,6 @@
 package assignment06;
 
-public class MyClass{
+public class MyClass implements Comparable<MyClass>{
 	private Offering course;
 	private double qualityPoints;
 	private int gpaCredits;
@@ -33,6 +33,16 @@ public class MyClass{
 	}
 	public double getQualityPoints() {
 		return qualityPoints;
+	}
+	@Override
+	public int compareTo(MyClass otherClass) {
+		if (otherClass == null){
+			return -1;
+		}
+		else{
+			return course.compareTo(otherClass.course);
+		}
+
 	}
 
 	

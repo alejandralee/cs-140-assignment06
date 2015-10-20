@@ -5,7 +5,7 @@ import java.util.Collections;
 
 public class Student{
 	private Person student;
-	private ArrayList<MyClass> myClasses;
+	private ArrayList<MyClass> myClasses = new ArrayList<MyClass>();
 	
 	public Student(Person student){
 		this.student = student;
